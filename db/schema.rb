@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_11_04_084045) do
   enable_extension "uuid-ossp"
 
   create_table "deals", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "deal_type"
+    t.integer "deal_type"
     t.float "deal_amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
